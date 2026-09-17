@@ -37,7 +37,7 @@ content-type: application/json
 
 ## Swagger screenshot
 
-C:\Users\Lenovo\OneDrive\Documents\vscode-projects\flyrank-crud-api\docs-screenshot.png
+https://github.com/jackpoletek/flyrank-crud-api/blob/main/docs-screenshot.png
 
 ## Notes
 
