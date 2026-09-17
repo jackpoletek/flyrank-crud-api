@@ -32,7 +32,7 @@ $ curl -i http://localhost:8000/tasks/1
 HTTP/1.1 200 OK
 content-type: application/json
 
-{"id":1,"title":"Buy milk","done":false}
+{"id":1,"title":"Make coffee","done":false}
 ```
 
 ## Swagger screenshot
