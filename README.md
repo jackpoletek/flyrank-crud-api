@@ -1,6 +1,6 @@
 # Task API
 
-A small CRUD API for managing a to-do list. Built with FastAPI. Data lives in memory only —
+A small CRUD API for managing a to-do list. Built with FastAPI. Data lives in memory only -
 it resets every time the server restarts (there's no database yet, that's next week).
 
 ## How to run it
@@ -18,7 +18,7 @@ The server runs at `http://localhost:8000`. Interactive docs (Swagger UI) are at
 | Method | Path           | What it does                                 |
 |--------|----------------|--------------------------------------------  |
 | GET    | `/`            | API info                                     |
-| GET    | `/health`      | Health check — `{"status": "ok"}`            |
+| GET    | `/health`      | Health check - `{"status": "ok"}`            |
 | GET    | `/tasks`       | List all tasks                               |
 | GET    | `/tasks/{id}`  | Get one task (404 if it doesn't exist)       |
 | POST   | `/tasks`       | Create a task (400 if title is missing)      |
@@ -41,5 +41,5 @@ content-type: application/json
 
 ## Notes
 
-- No database yet — tasks live in a plain Python list, so a server restart wipes them.
+- No database yet - tasks live in a plain Python list, so a server restart wipes them.
 - All error responses use the shape `{"error": "message"}`.
