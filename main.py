@@ -71,3 +71,28 @@ def create_task(task_input: TaskInput):
     new_task = {"id": next_task_id(), "title": title, "done": False}
     tasks.append(new_task)
     return new_task
+
+
+@app.put("/tasks/{task_id}", summary="Update a task")
+def update_task(task_id: int, task_input: TaskInput):
+    task = find_task(task_id)
+    if task is None:
+        raise HTTPException(status_code=404, detail=f"Task {task_id} not found")
+
+    title = task_input.title.strip()
+    if not title:
+        raise HTTPException(status_code=400, detail="Title is required")
+
+    task["title"] = title
+    task["done"] = task_input.done
+    return task
+
+
+@app.delete("/tasks/{task_id}", status_code=204, summary="Delete a task")
+def delete_task(task_id: int):
+    task = find_task(task_id)
+    if task is None:
+        raise HTTPException(status_code=404, detail=f"Task {task_id} not found")
+
+    tasks.remove(task)
+    return None
