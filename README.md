@@ -37,7 +37,7 @@ content-type: application/json
 
 ## Swagger screenshot
 
-https://github.com/jackpoletek/flyrank-crud-api/blob/main/docs-screenshot.png
+![UI](https://github.com/jackpoletek/flyrank-crud-api/blob/main/docs-screenshot.png)
 
 ## Notes
 
